@@ -1,12 +1,13 @@
-"""URL configuration for login_project."""
+"""URL patterns for the accounts app."""
 
-from django.contrib import admin
-from django.urls import path, include
-from django.shortcuts import redirect
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
-    # Redirect root to login
-    path('', lambda request: redirect('login')),
+    path('register/',  views.register_view,  name='register'),
+    path('login/',     views.login_view,     name='login'),
+    path('logout/',    views.logout_view,    name='logout'),
+    path('dashboard/', views.dashboard_view, name='dashboard'),
+    path('profile/',   views.profile_view,   name='profile'),
+    path('regex/',     views.regex_demo_view, name='regex_demo'),
 ]
