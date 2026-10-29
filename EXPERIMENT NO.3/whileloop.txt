@@ -1,0 +1,23 @@
+# 1.Write a PYTHON program to print the natural numbers up to n
+n = int(input("Enter n: "))
+sum = 0
+i = 1
+print("Odd numbers are:")
+while i <= n:
+    print(i, end=" ")
+    sum += i
+    i += 2
+print("\nSum of odd numbers =", sum)
+print()
+
+#Write a PYTHON program to print odd numbers up to n
+
+n = int(input("Enter n: "))
+sum = 0
+i = 2
+
+while i <= n:
+    sum += i
+    i += 2
+
+print("Sum of even numbers =", sum)
